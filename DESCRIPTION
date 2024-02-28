@@ -1,0 +1,28 @@
+Package: roeference
+Type: Package
+Title: rOEference: Easy Acces to Some Flemish Reference and Heritage Datasets 
+Version: 0.0.0.9000
+Authors@R: c(
+    person(given = 'Maarten',
+          family = 'Vermeyen',
+          role = c('aut', 'cre'),
+          email = 'maarten.vermeyen@vlaanderen.be',
+          comment = c(orcid = '0000-0003-1197-6562')),
+    person("Agentschap Onroerend Erfgoed", role = c("cph", "fnd"))
+  )
+Maintainer: Maarten Vermeyen <maarten@vermeyen.xyz>
+Description: This package provides helper functions to download and load some
+   Flemish public (geographic) reference datasets such as administrative units, as 
+   well as the public geographic datasets of the Flemish Heritage agency 
+   (agentschap Onroerend Erfgoed).
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports: 
+  httr2,
+  sf
+Suggests: 
+    testthat (>= 3.0.0),
+    withr
+Config/testthat/edition: 3
+RoxygenNote: 7.2.3

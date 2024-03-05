@@ -20,11 +20,18 @@ An object of class sf (see \link[sf]{st_read}). The object has a
 }
 \description{
 `get_oe_layer()` get an OGC Simple Features collection
-containing the specified layer. The package also provides wrapper functions
-for different layers. It is recommended to use the wrapper functions, as this
-function is dependent on the implementation of the download service provided
-by Flanders heritage. i.e. the download file name has to be passed in by
-calling code.
+  containing the specified layer. The package also provides wrapper functions
+  for different layers. It is recommended to use the wrapper functions, as this
+  function is dependent on the implementation of the download service provided
+  by Flanders heritage. i.e. the download file name has to be passed in by
+  calling code.
+}
+\details{
+This function relies on httr2's built in caching to implement an R session
+  specific cache of the downloaded zip files. This is useful
+  if you require multiple data sets from the same zip file. As this should
+  take into account the last-modified response header, you should always
+  receive the latest download version.
 }
 \examples{
 get_oe_layer('archeologie.zip', 'eindverslagen')

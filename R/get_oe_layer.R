@@ -1,11 +1,18 @@
 #' Get Flanders Heritage layer containing
 #'
 #' `get_oe_layer()` get an OGC Simple Features collection
-#' containing the specified layer. The package also provides wrapper functions
-#' for different layers. It is recommended to use the wrapper functions, as this
-#' function is dependent on the implementation of the download service provided
-#' by Flanders heritage. i.e. the download file name has to be passed in by
-#' calling code.
+#'   containing the specified layer. The package also provides wrapper functions
+#'   for different layers. It is recommended to use the wrapper functions, as this
+#'   function is dependent on the implementation of the download service provided
+#'   by Flanders heritage. i.e. the download file name has to be passed in by
+#'   calling code.
+#'
+#'   This function relies on httr2's built in caching to implement an R session
+#'   specific cache of the downloaded zip files. This is useful
+#'   if you require multiple data sets from the same zip file. As this should
+#'   take into account the last-modified response header, you should always
+#'   receive the latest download version.
+#'
 #'
 #' @param download_filename Filename of the zip file containing the layer to
 #'   be extracted, as mentioned on the download page \url{https://geo.onroerenderfgoed.be/downloads/}.
@@ -33,7 +40,7 @@ get_oe_layer <- function(download_filename, layer) {
     req_url_path_append('downloads') |>
     req_url_path_append(zip_name) |>
     req_retry(max_tries = 5) |>
-    req_cache(tempdir(), max_age = 3600) |>
+    req_cache(tempdir()) |>
     req_perform(path=zip_path)
 
   # unzip and remove zipfile

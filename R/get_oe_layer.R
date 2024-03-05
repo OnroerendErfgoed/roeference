@@ -33,6 +33,7 @@ get_oe_layer <- function(download_filename, layer) {
     req_url_path_append('downloads') |>
     req_url_path_append(zip_name) |>
     req_retry(max_tries = 5) |>
+    req_cache(tempdir(), max_age = 3600) |>
     req_perform(path=zip_path)
 
   # unzip and remove zipfile

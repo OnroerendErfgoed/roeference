@@ -3,6 +3,7 @@
 #'                   req_headers
 #'                   req_retry
 #'                   req_perform
+#'                   req_cache
 #'                   resp_body_string
 #'                   resp_body_json
 #'                   resp_content_type

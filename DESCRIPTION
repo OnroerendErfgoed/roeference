@@ -15,7 +15,7 @@ Description: This package provides helper functions to download and load some
    Flemish public (geographic) reference datasets such as administrative units, as 
    well as the public geographic datasets of the Flemish Heritage agency 
    (agentschap Onroerend Erfgoed).
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
@@ -23,6 +23,7 @@ Imports:
   sf
 Suggests: 
     testthat (>= 3.0.0),
-    withr
+    withr,
+    jsonlite
 Config/testthat/edition: 3
 RoxygenNote: 7.2.3

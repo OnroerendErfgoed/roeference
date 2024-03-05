@@ -42,31 +42,5 @@
 #' get_oe_aanduidingsobjecten(layer = 'vast_la')
 #' @export
 get_oe_aanduidingsobjecten <- function(layer = 'aanduidingsobjecten') {
-
-  # setup dir and filenames
-  download_dir <- tempdir()
-  ao_dir <- file.path(download_dir, 'aanduidingsobjecten')
-  zip_name <- 'aanduidingsobjecten.zip'
-  zip_path <- file.path(download_dir, zip_name)
-
-  # download dataset
-  resp <- request('https://geo.onroerenderfgoed.be') |>
-            req_url_path_append('downloads') |>
-            req_url_path_append(zip_name) |>
-            req_retry(max_tries = 5) |>
-            req_perform(path=zip_path)
-
-  # unzip and remove zipfile
-  unzip(zip_path, exdir = ao_dir)
-  invisible(file.remove(zip_path))
-
-  # read shapefile
-  df <- st_read(file.path(ao_dir, paste(layer, 'shp', sep = '.')), quiet = TRUE)
-
-  # add metadata
-  comment(df) <- c (
-      retrieval_url = resp_url(resp),
-      retrieval_time = format(resp_date(resp), "%Y-%m-%d %H:%M:%S %Z"))
-
-  return(df)
+  get_oe_layer('aanduidingsobjecten.zip', layer = layer)
 }

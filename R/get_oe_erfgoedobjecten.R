@@ -16,32 +16,8 @@
 #'
 #' @examples
 #' get_oe_erfgoedobjecten()
-#' get_oe_erfgoedobjecten(layer = 'vast_be')
+#' get_oe_erfgoedobjecten(layer = 'landschappelijk_gehelen')
 #' @export
 get_oe_erfgoedobjecten <- function(layer = 'erfgoedobjecten') {
-
-  # setup dir and filenames
-  download_dir = tempdir()
-  eo_dir = file.path(download_dir, 'erfgoedobjecten')
-  zip_name <- 'erfgoedobjecten.zip'
-
-  # download dataset
-  resp <- request('https://geo.onroerenderfgoed.be') |>
-            req_url_path_append('downloads') |>
-            req_url_path_append(zip_name) |>
-            req_retry(max_tries = 5) |>
-            req_perform(path=file.path(download_dir, zip_name))
-
-  # unzip and remove zipfile
-  unzip(file.path(download_dir, zip_name), exdir = eo_dir)
-
-  # read shapefile
-  df <- st_read(file.path(eo_dir, paste(layer, 'shp', sep = '.')), quiet = TRUE)
-
-  # add metadata
-  comment(df) <- c (
-    retrieval_url = resp_url(resp),
-    retrieval_time = format(resp_date(resp), "%Y-%m-%d %H:%M:%S %Z"))
-
-  return(df)
+  get_oe_layer('erfgoedobjecten.zip', layer = layer)
 }

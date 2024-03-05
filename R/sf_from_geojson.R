@@ -15,8 +15,10 @@
 #' comment containing the retrieval_time and retrieval_url.
 #'
 #' @examples
+#' \dontrun{
 #' resp_from_geojson(resp)
 #' resp_from_geojson(resp, annotated=TRUE)
+#' }
 #' @export
 resp_sf_from_geojson <- function (resp, annotated = TRUE) {
 

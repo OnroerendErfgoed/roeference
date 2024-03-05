@@ -25,5 +25,5 @@ system is EPSG:31370.
 }
 \examples{
 get_oe_erfgoedobjecten()
-get_oe_erfgoedobjecten(layer = 'vast_be')
+get_oe_erfgoedobjecten(layer = 'landschappelijk_gehelen')
 }

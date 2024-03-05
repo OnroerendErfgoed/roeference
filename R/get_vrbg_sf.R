@@ -35,7 +35,7 @@
 #' @examples
 #' get_vrbg_sf()
 #' get_vrbg_sf('Refarr')
-#' get_vrgb_sf(collection = 'Refarr', crs = 'EPSG:3812')
+#' get_vrbg_sf(collection = 'Refarr', crs = 'EPSG:3812')
 #' @export
 get_vrbg_sf <- function(collection = 'Refgem',
                         version = 'VRBG', crs = 'EPSG:31370') {

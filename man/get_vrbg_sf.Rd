@@ -43,5 +43,5 @@ An object of class sf (see \link[sf]{st_read}). The object has a
 \examples{
 get_vrbg_sf()
 get_vrbg_sf('Refarr')
-get_vrgb_sf(collection = 'Refarr', crs = 'EPSG:3812')
+get_vrbg_sf(collection = 'Refarr', crs = 'EPSG:3812')
 }

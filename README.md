@@ -13,7 +13,7 @@ well as the public geographic datasets of the Flemish Heritage agency
 
 ## Installation
 
-As we’re still working on our first CRAN releas, yu can install the
+As we’re still working on our first CRAN releas, you can install the
 development version of roeference using devtools:
 
 ``` r

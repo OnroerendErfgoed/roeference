@@ -12,6 +12,7 @@
 get_concept <- function (uri) {
     broader_concept <- request(uri) |>
       req_headers(Accept = 'application/json') |>
+      req_cache(tempdir()) |>
       req_perform() |>
       resp_body_json()
 }

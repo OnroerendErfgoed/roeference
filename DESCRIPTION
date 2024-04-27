@@ -1,7 +1,7 @@
 Package: roeference
 Type: Package
 Title: rOEference: Easy Acces to Some Flemish Reference and Heritage Datasets 
-Version: 0.0.0.9001
+Version: 0.0.0.9002
 Authors@R: c(
     person(given = 'Maarten',
           family = 'Vermeyen',

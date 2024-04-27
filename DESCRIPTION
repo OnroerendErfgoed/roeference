@@ -20,7 +20,8 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
   httr2,
-  sf
+  sf,
+  memoise
 Suggests: 
     testthat (>= 3.0.0),
     withr,

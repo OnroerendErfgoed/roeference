@@ -9,14 +9,16 @@
 #'
 #' @examples
 #' get_concept('https://id.erfgoed.net/thesauri/dateringen/1196')
-get_concept <- function (uri) {
+get_concept <- memoise(
+  function (uri) {
     broader_concept <- request(uri) |>
       req_headers(Accept = 'application/json') |>
       req_cache(tempdir()) |>
       req_throttle(60 / 60) |>
       req_perform() |>
       resp_body_json()
-}
+  }
+)
 
 #' Function to get the direct broader concept of a specific concept uri
 #'

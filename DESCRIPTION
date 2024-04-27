@@ -1,7 +1,7 @@
 Package: roeference
 Type: Package
 Title: rOEference: Easy Acces to Some Flemish Reference and Heritage Datasets 
-Version: 0.0.0.9003
+Version: 0.0.0.9004
 Authors@R: c(
     person(given = 'Maarten',
           family = 'Vermeyen',
@@ -21,7 +21,8 @@ LazyData: true
 Imports: 
   httr2,
   sf,
-  memoise
+  memoise,
+  dplyr
 Suggests: 
     testthat (>= 3.0.0),
     withr,

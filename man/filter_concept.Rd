@@ -4,14 +4,15 @@
 \alias{filter_concept}
 \title{Function to filter a dataset based with nested concepts on concept label}
 \usage{
-filter_concept(data, var, label)
+filter_concept(data, var, concept)
 }
 \arguments{
 \item{data}{a dataframe containing a variable with concept uri's.}
 
-\item{label}{a string representing the label of the concept. The filter
-function will return all rows with an exact match for this label in the
-nested dataset.}
+\item{concept}{a string representing the uri or label of the concept that
+should be used to filter the dataset. The filter
+function will return all rows with an exact match for this label or URI in
+the nested dataset.}
 
 \item{uri}{the dataframe variable containing the nested data frames}
 }
@@ -26,4 +27,5 @@ A filtered data frame
 }
 \examples{
 filter(d, concepts, 'ijzertijd')
+filter(d, concepts, 'https://id.erfgoed.net/thesauri/dateringen/1293')
 }

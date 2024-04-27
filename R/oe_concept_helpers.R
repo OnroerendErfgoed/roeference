@@ -70,10 +70,13 @@ get_broader_concepts <- function (uri) {
 
 #' Function to add a variable with broader concepts to a dataframe
 #'
-#' `broaden_concept()` Filter a dataset on a column with concepts as nested
-#'   dataframes. The nested dataframes must contain a 'label' variable and a
-#'   'uri' variable. This is the format returned by the broaden_concepts
-#'   function.
+#' `broaden_concept()` Given a dataset wich containing a column containing
+#'   Flanders Heritage concept URI's, this function will add a column containing
+#'   a nested data frame with the URI and label of this concept and all broader
+#'   concepts. The primary goal is to allow for easy filtering on specific
+#'   concepts by URI or Label while taking all narrower labels into account as
+#'   well. To do this, the dataset can either be unnested using tidyr::unnest()
+#'   or by using the filter_concept() function of this package.
 #'
 #' @param data a dataframe containing a variable with concept uri's.
 #'
@@ -87,7 +90,7 @@ get_broader_concepts <- function (uri) {
 #'  concepts.
 #'
 #' @examples
-#' broaden_concept(d, uri, broader concepts)
+#' broaden_concept(d, uri, broader_concepts)
 #' @export
 broaden_concept <- function(data, uri, new_var) {
   data |>
@@ -105,16 +108,23 @@ broaden_concept <- function(data, uri, new_var) {
 #'
 #' @param uri the dataframe variable containing the nested data frames
 #'
-#' @param label a string representing the label of the concept. The filter
-#'  function will return all rows with an exact match for this label in the
-#'  nested dataset.
+#' @param concept a string representing the uri or label of the concept that
+#'  should be used to filter the dataset. The filter
+#'  function will return all rows with an exact match for this label or URI in
+#'  the nested dataset.
 #'
 #' @returns A filtered data frame
 #'
 #' @examples
 #' filter(d, concepts, 'ijzertijd')
+#' filter(d, concepts, 'https://id.erfgoed.net/thesauri/dateringen/1293')
 #' @export
-filter_concept <- function(data, var, label) {
-  data |>
-    filter(as.logical(lapply({{ var }}, \(x) {label %in% x$label})))
+filter_concept <- function(data, var, concept) {
+  if (substr(concept, 1, 32)  == 'https://id.erfgoed.net/thesauri/') {
+    data |>
+      filter(as.logical(lapply({{ var }}, \(x) {concept %in% x$uri})))
+  } else {
+    data |>
+      filter(as.logical(lapply({{ var }}, \(x) {concept %in% x$label})))
+  }
 }

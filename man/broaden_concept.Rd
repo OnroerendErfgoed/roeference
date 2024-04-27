@@ -20,11 +20,14 @@ A dataframe with an added variable containing nested dataframes with
  concepts.
 }
 \description{
-`broaden_concept()` Filter a dataset on a column with concepts as nested
-  dataframes. The nested dataframes must contain a 'label' variable and a
-  'uri' variable. This is the format returned by the broaden_concepts
-  function.
+`broaden_concept()` Given a dataset wich containing a column containing
+  Flanders Heritage concept URI's, this function will add a column containing
+  a nested data frame with the URI and label of this concept and all broader
+  concepts. The primary goal is to allow for easy filtering on specific
+  concepts by URI or Label while taking all narrower labels into account as
+  well. To do this, the dataset can either be unnested using tidyr::unnest()
+  or by using the filter_concept() function of this package.
 }
 \examples{
-broaden_concept(d, uri, broader concepts)
+broaden_concept(d, uri, broader_concepts)
 }

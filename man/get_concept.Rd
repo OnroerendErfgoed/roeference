@@ -2,7 +2,7 @@
 % Please edit documentation in R/oe_concept_helpers.R
 \name{get_concept}
 \alias{get_concept}
-\title{Function to get the direct broader concept of a specific concept uri}
+\title{Function to get the a concept of a specific concept uri}
 \usage{
 get_concept(uri)
 }

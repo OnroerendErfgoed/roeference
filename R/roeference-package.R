@@ -16,5 +16,6 @@
 #' @importFrom sf st_read
 #' @importFrom memoise memoise
 #' @importFrom utils unzip
+#' @importFrom rlang :=
 NULL
 #> NULL

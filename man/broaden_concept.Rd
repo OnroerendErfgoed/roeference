@@ -29,5 +29,8 @@ A dataframe with an added variable containing nested dataframes with
   or by using the filter_concept() function of this package.
 }
 \examples{
+uri <- c("https://id.erfgoed.net/thesauri/materialen/169",
+         "https://id.erfgoed.net/thesauri/materialen/94")
+d <- data.frame(uri)
 broaden_concept(d, uri, broader_concepts)
 }

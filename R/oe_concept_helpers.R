@@ -1,4 +1,4 @@
-#' Function to get the direct broader concept of a specific concept uri
+#' Function to get the a concept of a specific concept uri
 #'
 #' `get_concept()` get the parsed json body returned from resolving the
 #'  concept uri.
@@ -9,9 +9,33 @@
 #'
 #' @examples
 #' get_concept('https://id.erfgoed.net/thesauri/dateringen/1196')
+#' @export
 get_concept <- memoise(
   function (uri) {
     broader_concept <- request(uri) |>
+      req_headers(Accept = 'application/json') |>
+      req_cache(tempdir()) |>
+      req_throttle(60 / 60) |>
+      req_perform() |>
+      resp_body_json()
+  }
+)
+
+#' Function to get the collection of a specific collection uri
+#'
+#' `get_collection()` get the parsed json body returned from resolving the
+#'  collection uri.
+#'
+#' @param uri a character string containg the uri of a collection
+#'
+#' @returns An object representing the parsed json body of the collection.
+#'
+#' @examples
+#' get_collection('https://id.erfgoed.net/thesauri/materialen/167')
+#' @export
+get_collection <- memoise(
+  function (uri) {
+    request(uri) |>
       req_headers(Accept = 'application/json') |>
       req_cache(tempdir()) |>
       req_throttle(60 / 60) |>
@@ -31,18 +55,28 @@ get_concept <- memoise(
 #'
 #' @examples
 #' get_broader_concept('https://id.erfgoed.net/thesauri/dateringen/1196')
+#' @export
 get_broader_concept <- function(concept) {
   if ('broader' %in% names(concept) && length(concept$broader) != 0) {
       broader_concept_uri <- concept$broader[[1]]$uri
       broader_concept <- get_concept(broader_concept_uri)
       return(broader_concept)
+  } else if ( 'member_of' %in% names(concept) && length(concept$member_of)) {
+      collection_uri <- concept$member_of[[1]]$uri
+      collection <- get_collection(collection_uri)
+      if ('superordinates' %in% names(collection)
+            && length(collection$superordinates) != 0
+            && collection$superordinates[[1]]$type == 'concept') {
+              broader_concept_uri <- collection$superordinates[[1]]$uri
+              broader_concept <- get_concept(broader_concept_uri)
+              return(broader_concept)
+            } else { return(NULL) }
   } else {
       return(NULL)
   }
 }
 
 #' Function to get all broader concepts of a specific concept uri
-#'
 #' `get_broader_concepts()` get a dataset containing the broader concepts of
 #' a specific concept by uri.
 #'
@@ -53,6 +87,7 @@ get_broader_concept <- function(concept) {
 #'
 #' @examples
 #' get_broader_concepts('https://id.erfgoed.net/thesauri/dateringen/1196')
+#' @export
 get_broader_concepts <- function (uri) {
   concept <- get_concept(uri)
   concepts <- data.frame(uri = concept$uri,
@@ -90,6 +125,9 @@ get_broader_concepts <- function (uri) {
 #'  concepts.
 #'
 #' @examples
+#' uri <- c("https://id.erfgoed.net/thesauri/materialen/169",
+#'          "https://id.erfgoed.net/thesauri/materialen/94")
+#' d <- data.frame(uri)
 #' broaden_concept(d, uri, broader_concepts)
 #' @export
 broaden_concept <- function(data, uri, new_var) {
@@ -116,8 +154,11 @@ broaden_concept <- function(data, uri, new_var) {
 #' @returns A filtered data frame
 #'
 #' @examples
+#' \dontrun{
+#' d <-
 #' filter(d, concepts, 'ijzertijd')
 #' filter(d, concepts, 'https://id.erfgoed.net/thesauri/dateringen/1293')
+#' }
 #' @export
 filter_concept <- function(data, var, concept) {
   if (substr(concept, 1, 32)  == 'https://id.erfgoed.net/thesauri/') {

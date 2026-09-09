@@ -3,6 +3,7 @@
 export(broaden_concept)
 export(filter_concept)
 export(get_oe_aanduidingsobjecten)
+export(get_oe_archeologierapporten)
 export(get_oe_eindverslagen)
 export(get_oe_erfgoedobjecten)
 export(get_oe_layer)

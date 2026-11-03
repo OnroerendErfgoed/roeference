@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_oe_eindverslagen.R
 \name{get_oe_eindverslagen}
 \alias{get_oe_eindverslagen}
-\title{Get Flanders Heritage layers containing archaeological reports (eindverslagen)}
+\title{Get Flanders Heritage layers containing final archaeological reports (eindverslagen)}
 \usage{
 get_oe_eindverslagen()
 }
@@ -12,8 +12,8 @@ comment containing the retrieval_time and retrieval_url.
 }
 \description{
 `get_oe_eindverslagen()` get an OGC Simple Features collection
-containing the final reports of archeological projects submitted
-to Flanders Heritage.
+containing the final reports of archeological excavation projects, submitted
+to Flanders Heritage within two years of the completion of fieldwork.
 }
 \examples{
 get_oe_eindverslagen()

@@ -1,8 +1,8 @@
-#' Get Flanders Heritage layers containing archaeological reports (eindverslagen)
+#' Get Flanders Heritage layers containing final archaeological reports (eindverslagen)
 #'
 #' `get_oe_eindverslagen()` get an OGC Simple Features collection
-#' containing the final reports of archeological projects submitted
-#' to Flanders Heritage.
+#' containing the final reports of archeological excavation projects, submitted
+#' to Flanders Heritage within two years of the completion of fieldwork.
 #'
 #' @returns An object of class sf (see \link[sf]{st_read}). The object has a
 #' comment containing the retrieval_time and retrieval_url.

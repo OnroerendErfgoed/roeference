@@ -26,6 +26,8 @@ A filtered data frame
   function.
 }
 \examples{
+\dontrun{
 filter(d, concepts, 'ijzertijd')
 filter(d, concepts, 'https://id.erfgoed.net/thesauri/dateringen/1293')
+}
 }

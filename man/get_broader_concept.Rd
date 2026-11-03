@@ -17,5 +17,7 @@ An object representing the parsed json body of the broader concept.
 of a specific concept by uri.
 }
 \examples{
+\dontrun{
 get_broader_concept('https://id.erfgoed.net/thesauri/dateringen/1196')
+}
 }

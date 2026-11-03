@@ -8,7 +8,9 @@
 #' @returns An object representing the parsed json body of the concept.
 #'
 #' @examples
+#' \dontrun{
 #' get_concept('https://id.erfgoed.net/thesauri/dateringen/1196')
+#' }
 get_concept <- memoise(
   function (uri) {
     broader_concept <- request(uri) |>
@@ -30,7 +32,9 @@ get_concept <- memoise(
 #' @returns An object representing the parsed json body of the broader concept.
 #'
 #' @examples
+#' \dontrun{
 #' get_broader_concept('https://id.erfgoed.net/thesauri/dateringen/1196')
+#' }
 get_broader_concept <- function(concept) {
   if ('broader' %in% names(concept) && length(concept$broader) != 0) {
       broader_concept_uri <- concept$broader[[1]]$uri
@@ -52,7 +56,9 @@ get_broader_concept <- function(concept) {
 #'  uri's and labels of the input concept and all broader concepts.
 #'
 #' @examples
+#' \dontrun{
 #' get_broader_concepts('https://id.erfgoed.net/thesauri/dateringen/1196')
+#' }
 get_broader_concepts <- function (uri) {
   concept <- get_concept(uri)
   concepts <- data.frame(uri = concept$uri,
@@ -90,7 +96,9 @@ get_broader_concepts <- function (uri) {
 #'  concepts.
 #'
 #' @examples
+#' \dontrun{
 #' broaden_concept(d, uri, broader_concepts)
+#' }
 #' @export
 broaden_concept <- function(data, uri, new_var) {
   data |>
@@ -116,8 +124,10 @@ broaden_concept <- function(data, uri, new_var) {
 #' @returns A filtered data frame
 #'
 #' @examples
+#' \dontrun{
 #' filter(d, concepts, 'ijzertijd')
 #' filter(d, concepts, 'https://id.erfgoed.net/thesauri/dateringen/1293')
+#' }
 #' @export
 filter_concept <- function(data, var, concept) {
   if (substr(concept, 1, 32)  == 'https://id.erfgoed.net/thesauri/') {

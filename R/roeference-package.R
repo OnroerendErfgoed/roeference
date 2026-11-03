@@ -11,8 +11,8 @@
 #'                   resp_content_type
 #'                   resp_url
 #'                   resp_date
-#'                   request
-#'                   response
+#'                   request response
+#'
 #' @importFrom sf st_read
 #' @importFrom memoise memoise
 #' @importFrom utils unzip

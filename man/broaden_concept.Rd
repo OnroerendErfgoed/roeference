@@ -29,5 +29,7 @@ A dataframe with an added variable containing nested dataframes with
   or by using the filter_concept() function of this package.
 }
 \examples{
+\dontrun{
 broaden_concept(d, uri, broader_concepts)
+}
 }

@@ -17,5 +17,7 @@ An object representing the parsed json body of the concept.
  concept uri.
 }
 \examples{
+\dontrun{
 get_concept('https://id.erfgoed.net/thesauri/dateringen/1196')
+}
 }

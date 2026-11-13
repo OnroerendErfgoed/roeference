@@ -1,0 +1,39 @@
+# Package index
+
+## All functions
+
+- [`broaden_concept()`](https://onroerenderfgoed.github.io/roeference/reference/broaden_concept.md)
+  : Function to add a variable with broader concepts to a dataframe
+- [`filter_concept()`](https://onroerenderfgoed.github.io/roeference/reference/filter_concept.md)
+  : Function to filter a dataset based with nested concepts on concept
+  label
+- [`get_broader_concept()`](https://onroerenderfgoed.github.io/roeference/reference/get_broader_concept.md)
+  : Function to get the direct broader concept of a specific concept
+- [`get_broader_concepts()`](https://onroerenderfgoed.github.io/roeference/reference/get_broader_concepts.md)
+  : Function to get all broader concepts of a specific concept uri
+- [`get_concept()`](https://onroerenderfgoed.github.io/roeference/reference/get_concept.md)
+  : Function to get the direct broader concept of a specific concept uri
+- [`get_oe_aanduidingsobjecten()`](https://onroerenderfgoed.github.io/roeference/reference/get_oe_aanduidingsobjecten.md)
+  : Get Flanders Heritage Inventory designation objects
+  (aanduidingsobjecten)
+- [`get_oe_archeologierapporten()`](https://onroerenderfgoed.github.io/roeference/reference/get_oe_archeologierapporten.md)
+  : Get Flanders Heritage layers containing archaeological reports
+  (archeologierapporten)
+- [`get_oe_eindverslagen()`](https://onroerenderfgoed.github.io/roeference/reference/get_oe_eindverslagen.md)
+  : Get Flanders Heritage layers containing final archaeological reports
+  (eindverslagen)
+- [`get_oe_erfgoedobjecten()`](https://onroerenderfgoed.github.io/roeference/reference/get_oe_erfgoedobjecten.md)
+  : Get heritage objects (erfgoedobjecten)
+- [`get_oe_layer()`](https://onroerenderfgoed.github.io/roeference/reference/get_oe_layer.md)
+  : Get Flanders Heritage layer containing
+- [`get_oe_notas()`](https://onroerenderfgoed.github.io/roeference/reference/get_oe_notas.md)
+  : Get Flanders Heritage dataset of archaeology memorandums and
+  memorandums (archeologienotas en notas)
+- [`get_vrbg_collection_ids()`](https://onroerenderfgoed.github.io/roeference/reference/get_vrbg_collection_ids.md)
+  : Get collection ID's of administrative units in Flanders
+- [`get_vrbg_sf()`](https://onroerenderfgoed.github.io/roeference/reference/get_vrbg_sf.md)
+  : Get reference datasets for administrative borders in Flanders
+- [`get_vrbg_supported_crs()`](https://onroerenderfgoed.github.io/roeference/reference/get_vrbg_supported_crs.md)
+  : Get supported CRS for administrative borders in Flanders
+- [`resp_sf_from_geojson()`](https://onroerenderfgoed.github.io/roeference/reference/resp_sf_from_geojson.md)
+  : Extract sf object from httr2 response object containing geojson

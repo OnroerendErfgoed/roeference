@@ -18,6 +18,6 @@ An object representing the parsed json body of the concept.
 }
 \examples{
 \dontrun{
-get_concept('https://id.erfgoed.net/thesauri/dateringen/1196')
+get_concept("https://id.erfgoed.net/thesauri/dateringen/1196")
 }
 }

@@ -27,7 +27,7 @@ A filtered data frame
 }
 \examples{
 \dontrun{
-filter(d, concepts, 'ijzertijd')
-filter(d, concepts, 'https://id.erfgoed.net/thesauri/dateringen/1293')
+filter(d, concepts, "ijzertijd")
+filter(d, concepts, "https://id.erfgoed.net/thesauri/dateringen/1293")
 }
 }

@@ -1,0 +1,7 @@
+url: https://onroerenderfgoed.github.io/roeference/
+template:
+  bootstrap: 5
+  light-switch: true
+  bslib:
+    bootswatch: lux
+    pkgdown-nav-height: 100px

@@ -16,22 +16,25 @@
 #'
 #' @examples
 #' \dontrun{
-#' resp_from_geojson(resp)
-#' resp_from_geojson(resp, annotated=TRUE)
+#' resp_sf_from_geojson(resp)
+#' resp_sf_from_geojson(resp, annotated = TRUE)
 #' }
 #' @export
-resp_sf_from_geojson <- function (resp, annotated = TRUE) {
+resp_sf_from_geojson <- function(resp, annotated = TRUE) {
+  stopifnot(resp_content_type(resp) == "application/geo+json")
 
-    stopifnot(resp_content_type(resp) == 'application/geo+json')
+  df <- resp |>
+    resp_body_string() |>
+    st_read(quiet = TRUE)
 
-    df <- resp |>
-          resp_body_string() |>
-          st_read(quiet=TRUE)
-
-    if (annotated) {
-      comment(df) <- c( retrieval_url = resp_url(resp),
-                        retrieval_time = format(resp_date(resp),
-                                                '%Y-%m-%d %H:%M:%S %Z') )
-    }
-    return(df)
+  if (annotated) {
+    comment(df) <- c(
+      retrieval_url = resp_url(resp),
+      retrieval_time = format(
+        resp_date(resp),
+        "%Y-%m-%d %H:%M:%S %Z"
+      )
+    )
+  }
+  return(df)
 }

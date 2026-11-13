@@ -9,7 +9,7 @@ get_oe_layer(download_filename, layer)
 \arguments{
 \item{download_filename}{Filename of the zip file containing the layer to
 be extracted, as mentioned on the download page \url{https://geo.onroerenderfgoed.be/downloads/}.
-e.g. 'archeologie.zip}
+e.g. 'archeologie.zip'}
 
 \item{layer}{Name of the layer (shapefile) to be extracted. e.g.
 eindverslagen.shp}
@@ -34,5 +34,5 @@ This function relies on httr2's built in caching to implement an R session
   receive the latest download version.
 }
 \examples{
-get_oe_layer('archeologie.zip', 'eindverslagen')
+get_oe_layer("archeologie.zip", "eindverslagen")
 }

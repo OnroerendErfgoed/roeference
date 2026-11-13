@@ -16,7 +16,7 @@ character vector containing EPSG codes in the format 'EPSG:<number>'.
 }
 \description{
 `get_vrbg_supported_crs()` get an character vector of the EPSG codes of
-coordinate reference systems supported byspecific version of the
+coordinate reference systems supported by a specific version of the
 Provisional Reference File of Municipal Borders (Voorlopig Referentiebestand
 Gemeentegrenzen) as published through the OGC Features API of the
 Flemish Government (see:
@@ -24,6 +24,6 @@ Flemish Government (see:
 }
 \examples{
 get_vrbg_supported_crs()
-get_vrbg_supported_crs('VRBG2003')
-get_vrbg_supported_crs(version = 'VRBG2003')
+get_vrbg_supported_crs("VRBG2003")
+get_vrbg_supported_crs(version = "VRBG2003")
 }

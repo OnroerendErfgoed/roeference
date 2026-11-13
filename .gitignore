@@ -4,3 +4,5 @@ roeference.Rproj
 .RData
 .Ruserdata
 .Rd2PDF*
+.Rprofile
+docs/

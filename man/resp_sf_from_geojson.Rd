@@ -25,7 +25,7 @@ in geojson format.
 }
 \examples{
 \dontrun{
-resp_from_geojson(resp)
-resp_from_geojson(resp, annotated=TRUE)
+resp_sf_from_geojson(resp)
+resp_sf_from_geojson(resp, annotated = TRUE)
 }
 }

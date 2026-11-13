@@ -19,6 +19,6 @@ a specific concept by uri.
 }
 \examples{
 \dontrun{
-get_broader_concepts('https://id.erfgoed.net/thesauri/dateringen/1196')
+get_broader_concepts("https://id.erfgoed.net/thesauri/dateringen/1196")
 }
 }

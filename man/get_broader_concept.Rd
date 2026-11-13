@@ -2,22 +2,22 @@
 % Please edit documentation in R/oe_concept_helpers.R
 \name{get_broader_concept}
 \alias{get_broader_concept}
-\title{Function to get the direct broader concept of a specific concept uri}
+\title{Function to get the direct broader concept of a specific concept}
 \usage{
 get_broader_concept(concept)
 }
 \arguments{
-\item{uri}{a character string containg the uri of a concept}
+\item{concept}{a parsed concept}
 }
 \value{
 An object representing the parsed json body of the broader concept.
 }
 \description{
-`get_broader_concepts()` get a dataset containing the direct broader concepts
-of a specific concept by uri.
+`get_broader_concept()` get a dataset containing the direct broader concepts
+of a specific concept.
 }
 \examples{
 \dontrun{
-get_broader_concept('https://id.erfgoed.net/thesauri/dateringen/1196')
+get_broader_concept("https://id.erfgoed.net/thesauri/dateringen/1196")
 }
 }

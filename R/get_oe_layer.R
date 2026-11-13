@@ -16,7 +16,7 @@
 #'
 #' @param download_filename Filename of the zip file containing the layer to
 #'   be extracted, as mentioned on the download page \url{https://geo.onroerenderfgoed.be/downloads/}.
-#'   e.g. 'archeologie.zip
+#'   e.g. 'archeologie.zip'
 #'
 #' @param layer Name of the layer (shapefile) to be extracted. e.g.
 #'   eindverslagen.shp
@@ -25,10 +25,9 @@
 #'   comment containing the retrieval_time and retrieval_url.
 #'
 #' @examples
-#' get_oe_layer('archeologie.zip', 'eindverslagen')
+#' get_oe_layer("archeologie.zip", "eindverslagen")
 #' @export
 get_oe_layer <- function(download_filename, layer) {
-
   # setup dir and filenames
   download_dir <- tempdir()
   dir <- file.path(download_dir, layer)
@@ -36,24 +35,25 @@ get_oe_layer <- function(download_filename, layer) {
   zip_path <- file.path(download_dir, zip_name)
 
   # download dataset
-  resp <- request('https://geo.onroerenderfgoed.be') |>
-    req_url_path_append('downloads') |>
+  resp <- request("https://geo.onroerenderfgoed.be") |>
+    req_url_path_append("downloads") |>
     req_url_path_append(zip_name) |>
     req_retry(max_tries = 5) |>
     req_cache(tempdir()) |>
-    req_perform(path=zip_path)
+    req_perform(path = zip_path)
 
   # unzip and remove zipfile
   unzip(zip_path, exdir = dir)
   invisible(file.remove(zip_path))
 
   # read shapefile
-  df <- st_read(file.path(dir, paste(layer, 'shp', sep='.')), quiet = TRUE)
+  df <- st_read(file.path(dir, paste(layer, "shp", sep = ".")), quiet = TRUE)
 
   # add metadata
-  comment(df) <- c (
+  comment(df) <- c(
     retrieval_url = resp_url(resp),
-    retrieval_time = format(resp_date(resp), "%Y-%m-%d %H:%M:%S %Z"))
+    retrieval_time = format(resp_date(resp), "%Y-%m-%d %H:%M:%S %Z")
+  )
 
   return(df)
 }

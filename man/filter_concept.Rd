@@ -9,12 +9,12 @@ filter_concept(data, var, concept)
 \arguments{
 \item{data}{a dataframe containing a variable with concept uri's.}
 
+\item{var}{the dataframe variable containing the nested data frames}
+
 \item{concept}{a string representing the uri or label of the concept that
 should be used to filter the dataset. The filter
 function will return all rows with an exact match for this label or URI in
 the nested dataset.}
-
-\item{uri}{the dataframe variable containing the nested data frames}
 }
 \value{
 A filtered data frame

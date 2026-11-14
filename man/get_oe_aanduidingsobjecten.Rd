@@ -10,28 +10,28 @@ get_oe_aanduidingsobjecten(layer = "aanduidingsobjecten")
 \item{layer}{layer to be returned from the downloaded zip file. Default value
 is 'aanduidingsobjecten', containing all types of designation objects.
 Other values are:
-\itemize{
- \item{aanduidingsobjecten_historiek} {Designation objects, including
+\describe{
+ \item{aanduidingsobjecten_historiek}{Designation objects, including
    designations that are no longer valid.}
-\item{bes_arch_site} {Protected archaeological sites / Beschermde
+\item{bes_arch_site}{Protected archaeological sites / Beschermde
    archeologische sites}
-\item{bes_landschap} {Protected Landscape / Beschermd cultuurhistorische
+\item{bes_landschap}{Protected Landscape / Beschermd cultuurhistorische
    landschappen}
-\item{bes_monument} {Protected Monument / Beschermd monumenten}
-\item{bes_overgangszone} {Transitional zone' / Overganszones}
-\item{bes_sd_gezicht} {Protected cityscape, / Beschermde stads-
+\item{bes_monument}{Protected Monument / Beschermd monumenten}
+\item{bes_overgangszone}{Transitional zone' / Overganszones}
+\item{bes_sd_gezicht}{Protected cityscape, / Beschermde stads-
    of dorpsgezichten}
-\item{erfgoedls} {Heritage landscape / Erfgoedlandschap}
-\item{gga} {Area where no archaeology is to be expected / Gebieden waar
+\item{erfgoedls}{Heritage landscape / Erfgoedlandschap}
+\item{gga}{Area where no archaeology is to be expected / Gebieden waar
    geen archeologie te verwachten valt}
-\item{unesco_kern} {UNESCO World Heritage site - core area / UNESCO
+\item{unesco_kern}{UNESCO World Heritage site - core area / UNESCO
    werelderfgoed - kernzones}
-\item{unesco_buffer} {UNESCO World Heritage site - buffer area / UNESCO
+\item{unesco_buffer}{UNESCO World Heritage site - buffer area / UNESCO
    werelderfgoed - bufferzones}
-\item{vast_az} {Archaeological zone / Vastgestelde archeologische zone}
-\item{vast_be} {Architectural heritage / Vastgesteld bouwkundig erfgoed}
-\item{vast_la} {Landscape atlas / Vastgestelde landschapsatlas}
-\item{vast_le} {Landscape elements / Vastgestelde landschapselementen}
+\item{vast_az}{Archaeological zone / Vastgestelde archeologische zone}
+\item{vast_be}{Architectural heritage / Vastgesteld bouwkundig erfgoed}
+\item{vast_la}{Landscape atlas / Vastgestelde landschapsatlas}
+\item{vast_le}{Landscape elements / Vastgestelde landschapselementen}
 }}
 }
 \value{

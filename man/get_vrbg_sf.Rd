@@ -10,11 +10,11 @@ get_vrbg_sf(collection = "Refgem", version = "VRBG", crs = "EPSG:31370")
 \item{collection}{a string representing the
 collection (i.e. type of administrative unit) that should be returned.
 Possible values for the default version of the reference data set are:
-\itemize{
+\describe{
   \item{Refgem}{municipalities, default}
-  \item{'Refgew'}{Flemish region}
-  \item{Refprv}{}{provinces}
-  \item{'Refarr'}{arrondissements}
+  \item{Refgew}{Flemish region}
+  \item{Refprv}{provinces}
+  \item{Refarr}{arrondissements}
 }
 The collection names are case-sensitive.}
 

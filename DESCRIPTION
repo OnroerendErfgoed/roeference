@@ -29,10 +29,11 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
-  httr2,
-  sf,
-  memoise,
-  dplyr
+    httr2,
+    sf,
+    memoise,
+    dplyr,
+    rlang
 Suggests: 
     testthat (>= 3.0.0),
     withr,

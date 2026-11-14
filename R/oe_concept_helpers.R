@@ -11,7 +11,7 @@
 #' \dontrun{
 #' get_concept("https://id.erfgoed.net/thesauri/dateringen/1196")
 #' }
-get_concept <- memoise(
+get_concept <- memoise::memoise(
   function(uri) {
     broader_concept <- request(uri) |>
       req_headers(Accept = "application/json") |>
@@ -120,7 +120,7 @@ broaden_concept <- function(data, uri, new_var) {
 #'
 #' @param data a dataframe containing a variable with concept uri's.
 #'
-#' @param uri the dataframe variable containing the nested data frames
+#' @param var the dataframe variable containing the nested data frames
 #'
 #' @param concept a string representing the uri or label of the concept that
 #'  should be used to filter the dataset. The filter

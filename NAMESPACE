@@ -30,5 +30,6 @@ importFrom(httr2,
   response
 )
 importFrom(memoise,memoise)
+importFrom(rlang,":=")
 importFrom(sf,st_read)
 importFrom(utils,unzip)

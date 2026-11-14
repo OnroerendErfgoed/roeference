@@ -20,40 +20,65 @@ get_oe_aanduidingsobjecten(layer = "aanduidingsobjecten")
   'aanduidingsobjecten', containing all types of designation objects.
   Other values are:
 
-  - aanduidingsobjecten_historiek Designation objects, including
-    designations that are no longer valid.
+  aanduidingsobjecten_historiek
 
-  - bes_arch_site Protected archaeological sites / Beschermde
-    archeologische sites
+  :   Designation objects, including designations that are no longer
+      valid.
 
-  - bes_landschap Protected Landscape / Beschermd cultuurhistorische
-    landschappen
+  bes_arch_site
 
-  - bes_monument Protected Monument / Beschermd monumenten
+  :   Protected archaeological sites / Beschermde archeologische sites
 
-  - bes_overgangszone Transitional zone' / Overganszones
+  bes_landschap
 
-  - bes_sd_gezicht Protected cityscape, / Beschermde stads- of
-    dorpsgezichten
+  :   Protected Landscape / Beschermd cultuurhistorische landschappen
 
-  - erfgoedls Heritage landscape / Erfgoedlandschap
+  bes_monument
 
-  - gga Area where no archaeology is to be expected / Gebieden waar geen
-    archeologie te verwachten valt
+  :   Protected Monument / Beschermd monumenten
 
-  - unesco_kern UNESCO World Heritage site - core area / UNESCO
-    werelderfgoed - kernzones
+  bes_overgangszone
 
-  - unesco_buffer UNESCO World Heritage site - buffer area / UNESCO
-    werelderfgoed - bufferzones
+  :   Transitional zone' / Overganszones
 
-  - vast_az Archaeological zone / Vastgestelde archeologische zone
+  bes_sd_gezicht
 
-  - vast_be Architectural heritage / Vastgesteld bouwkundig erfgoed
+  :   Protected cityscape, / Beschermde stads- of dorpsgezichten
 
-  - vast_la Landscape atlas / Vastgestelde landschapsatlas
+  erfgoedls
 
-  - vast_le Landscape elements / Vastgestelde landschapselementen
+  :   Heritage landscape / Erfgoedlandschap
+
+  gga
+
+  :   Area where no archaeology is to be expected / Gebieden waar geen
+      archeologie te verwachten valt
+
+  unesco_kern
+
+  :   UNESCO World Heritage site - core area / UNESCO werelderfgoed -
+      kernzones
+
+  unesco_buffer
+
+  :   UNESCO World Heritage site - buffer area / UNESCO werelderfgoed -
+      bufferzones
+
+  vast_az
+
+  :   Archaeological zone / Vastgestelde archeologische zone
+
+  vast_be
+
+  :   Architectural heritage / Vastgesteld bouwkundig erfgoed
+
+  vast_la
+
+  :   Landscape atlas / Vastgestelde landschapsatlas
+
+  vast_le
+
+  :   Landscape elements / Vastgestelde landschapselementen
 
 ## Value
 
@@ -68,12 +93,12 @@ get_oe_aanduidingsobjecten()
 #> Error in req_perform(req_cache(req_retry(req_url_path_append(req_url_path_append(request("https://geo.onroerenderfgoed.be"),     "downloads"), zip_name), max_tries = 5), tempdir()), path = zip_path): Failed to perform HTTP request.
 #> Caused by error in `curl::curl_fetch_disk()`:
 #> ! Timeout was reached [geo.onroerenderfgoed.be]:
-#> Resolving timed out after 10002 milliseconds
+#> Resolving timed out after 10000 milliseconds
 get_oe_aanduidingsobjecten('vast_la')
 #> Error in req_perform(req_cache(req_retry(req_url_path_append(req_url_path_append(request("https://geo.onroerenderfgoed.be"),     "downloads"), zip_name), max_tries = 5), tempdir()), path = zip_path): Failed to perform HTTP request.
 #> Caused by error in `curl::curl_fetch_disk()`:
 #> ! Timeout was reached [geo.onroerenderfgoed.be]:
-#> Resolving timed out after 10002 milliseconds
+#> Resolving timed out after 10000 milliseconds
 get_oe_aanduidingsobjecten(layer = 'vast_la')
 #> Simple feature collection with 86 features and 12 fields
 #> Geometry type: POLYGON
@@ -82,27 +107,27 @@ get_oe_aanduidingsobjecten(layer = 'vast_la')
 #> Projected CRS: BD72 / Belgian Lambert 72
 #> First 10 features:
 #>    AANDUID_ID
-#> 1       10312
-#> 2       10329
-#> 3       10314
-#> 4       10274
-#> 5       10324
-#> 6       10381
-#> 7       10290
-#> 8       10279
-#> 9       10269
-#> 10      10416
+#> 1       10453
+#> 2       10312
+#> 3      127717
+#> 4       10329
+#> 5       10314
+#> 6       10274
+#> 7       10324
+#> 8       10381
+#> 9       10290
+#> 10      10279
 #>                                                                                     NAAM
-#> 1                                                          Vallei van de Gulp bij Teuven
-#> 2                        Steilrand van het Kempisch Plateau van de Kikbeek tot de Asbeek
-#> 3                                    Omgeving van het Iers Kruis op de Keiberg te Lafelt
-#> 4                                                       's Herenbos, Heihuizen en Zalfen
-#> 5  Valleien van Dommel en Bollisserbeek tussen Peer, Hechtel-Eksel, Overpelt en Neerpelt
-#> 6                          Vallei van de Munkbosbeek met het kasteeldomein van Beerlegem
-#> 7                                    Dal van de Kleine Nete tussen Nijlen en Grobbendonk
-#> 8                                                                       Groot Schietveld
-#> 9                                                                         Brechtse Heide
-#> 10                                                                   Slagveld Passendale
+#> 1         Ieperse vestingen en omgeving, bossen ten zuiden en heuvelrug Wijtschate-Mesen
+#> 2                                                          Vallei van de Gulp bij Teuven
+#> 3                                    Bellebroek en Dendermeersen tussen Oudegem en Wieze
+#> 4                        Steilrand van het Kempisch Plateau van de Kikbeek tot de Asbeek
+#> 5                                    Omgeving van het Iers Kruis op de Keiberg te Lafelt
+#> 6                                                       's Herenbos, Heihuizen en Zalfen
+#> 7  Valleien van Dommel en Bollisserbeek tussen Peer, Hechtel-Eksel, Overpelt en Neerpelt
+#> 8                          Vallei van de Munkbosbeek met het kasteeldomein van Beerlegem
+#> 9                                    Dal van de Kleine Nete tussen Nijlen en Grobbendonk
+#> 10                                                                      Groot Schietveld
 #>    ALT_NAAM                                            TYPE_URI
 #> 1      <NA> https://id.erfgoed.net/thesauri/aanduidingstypes/10
 #> 2      <NA> https://id.erfgoed.net/thesauri/aanduidingstypes/10
@@ -126,58 +151,58 @@ get_oe_aanduidingsobjecten(layer = 'vast_la')
 #> 9  vastgesteld gebied in de landschapsatlas
 #> 10 vastgesteld gebied in de landschapsatlas
 #>                                                                                                                                                                               LOCATIE
-#> 1                                                                                                                                                         Remersdaal, Teuven (Voeren)
-#> 2                                                                                                                                  Lanaken, Rekem (Lanaken), Opgrimbie (Maasmechelen)
-#> 3                                                                                                                                                                 Vlijtingen (Riemst)
-#> 4                                                                                                                                                Oostmalle (Malle), Zoersel (Zoersel)
-#> 5                                                                                                                       Eksel (Hechtel-Eksel), Peer (Peer), Neerpelt, Overpelt (Pelt)
-#> 6  Dikkelvenne (Gavere), Balegem, Scheldewindeke (Oosterzele), Velzeke-Ruddershove (Zottegem), Beerlegem, Dikkele, Meilegem, Nederzwalm-Hermelgem, Paulatem, Sint-Maria-Latem (Zwalm)
-#> 7                                                                                                              Grobbendonk (Grobbendonk), Nijlen (Nijlen), Pulle, Viersel (Zandhoven)
-#> 8                                                                                                         Brasschaat (Brasschaat), Brecht (Brecht), Loenhout, Wuustwezel (Wuustwezel)
-#> 9                                                                                           Brecht, Sint-Job-in-'t Goor, Sint-Lenaarts (Brecht), Westmalle (Malle), Schilde (Schilde)
-#> 10                                                                                                                                                  Passendale, Zonnebeke (Zonnebeke)
+#> 1                                                  Kemmel, Wijtschate, Wulvergem (Heuvelland), Hollebeke, Ieper, Voormezele, Zillebeke (Ieper), Mesen (Mesen), Zandvoorde (Zonnebeke)
+#> 2                                                                                                                                                         Remersdaal, Teuven (Voeren)
+#> 3                                                            Gijzegem, Herdersem (Aalst), Mespelare, Oudegem, Sint-Gillis-bij-Dendermonde (Dendermonde), Denderbelle, Wieze (Lebbeke)
+#> 4                                                                                                                                  Lanaken, Rekem (Lanaken), Opgrimbie (Maasmechelen)
+#> 5                                                                                                                                                                 Vlijtingen (Riemst)
+#> 6                                                                                                                                                Oostmalle (Malle), Zoersel (Zoersel)
+#> 7                                                                                                                       Eksel (Hechtel-Eksel), Peer (Peer), Neerpelt, Overpelt (Pelt)
+#> 8  Dikkelvenne (Gavere), Balegem, Scheldewindeke (Oosterzele), Velzeke-Ruddershove (Zottegem), Beerlegem, Dikkele, Meilegem, Nederzwalm-Hermelgem, Paulatem, Sint-Maria-Latem (Zwalm)
+#> 9                                                                                                              Grobbendonk (Grobbendonk), Nijlen (Nijlen), Pulle, Viersel (Zandhoven)
+#> 10                                                                                                        Brasschaat (Brasschaat), Brecht (Brecht), Loenhout, Wuustwezel (Wuustwezel)
 #>    GELD_START GELD_EINDE
-#> 1  2008-12-24       <NA>
-#> 2  2014-02-12       <NA>
-#> 3  2008-12-24       <NA>
-#> 4  2010-01-27       <NA>
-#> 5  2013-12-05       <NA>
-#> 6  2008-07-25       <NA>
-#> 7  2015-01-27       <NA>
-#> 8  2011-02-09       <NA>
-#> 9  2008-12-24       <NA>
-#> 10 2015-04-23       <NA>
-#>                                                                 URL
-#> 1  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10312
-#> 2  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10329
-#> 3  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10314
-#> 4  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10274
-#> 5  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10324
-#> 6  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10381
-#> 7  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10290
-#> 8  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10279
-#> 9  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10269
-#> 10 https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10416
-#>                                                 URI                  NISCODES
-#> 1  https://id.erfgoed.net/aanduidingsobjecten/10312                   {73109}
-#> 2  https://id.erfgoed.net/aanduidingsobjecten/10329       {71067,73042,73107}
-#> 3  https://id.erfgoed.net/aanduidingsobjecten/10314       {73042,73066,73110}
-#> 4  https://id.erfgoed.net/aanduidingsobjecten/10274       {11055,11057,13004}
-#> 5  https://id.erfgoed.net/aanduidingsobjecten/10324       {72030,72038,72043}
-#> 6  https://id.erfgoed.net/aanduidingsobjecten/10381 {41081,44020,44052,45065}
-#> 7  https://id.erfgoed.net/aanduidingsobjecten/10290 {11035,11054,12026,13010}
-#> 8  https://id.erfgoed.net/aanduidingsobjecten/10279       {11008,11009,11053}
-#> 9  https://id.erfgoed.net/aanduidingsobjecten/10269       {11009,11039,11057}
-#> 10 https://id.erfgoed.net/aanduidingsobjecten/10416                   {33037}
+#> 1  2013-07-04       <NA>
+#> 2  2008-12-24       <NA>
+#> 3  2021-07-19       <NA>
+#> 4  2014-02-12       <NA>
+#> 5  2008-12-24       <NA>
+#> 6  2010-01-27       <NA>
+#> 7  2013-12-05       <NA>
+#> 8  2008-07-25       <NA>
+#> 9  2015-01-27       <NA>
+#> 10 2011-02-09       <NA>
+#>                                                                  URL
+#> 1   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10453
+#> 2   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10312
+#> 3  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/127717
+#> 4   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10329
+#> 5   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10314
+#> 6   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10274
+#> 7   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10324
+#> 8   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10381
+#> 9   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10290
+#> 10  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10279
+#>                                                  URI                  NISCODES
+#> 1   https://id.erfgoed.net/aanduidingsobjecten/10453 {33011,33016,33037,33039}
+#> 2   https://id.erfgoed.net/aanduidingsobjecten/10312                   {73109}
+#> 3  https://id.erfgoed.net/aanduidingsobjecten/127717       {41002,42006,42011}
+#> 4   https://id.erfgoed.net/aanduidingsobjecten/10329       {71067,73042,73107}
+#> 5   https://id.erfgoed.net/aanduidingsobjecten/10314       {73042,73066,73110}
+#> 6   https://id.erfgoed.net/aanduidingsobjecten/10274       {11055,11057,13004}
+#> 7   https://id.erfgoed.net/aanduidingsobjecten/10324       {72030,72038,72043}
+#> 8   https://id.erfgoed.net/aanduidingsobjecten/10381 {41081,44020,44052,45065}
+#> 9   https://id.erfgoed.net/aanduidingsobjecten/10290 {11035,11054,12026,13010}
+#> 10  https://id.erfgoed.net/aanduidingsobjecten/10279       {11008,11009,11053}
 #>                            DATAVERANT                       geometry
-#> 1  https://id.erfgoed.net/actoren/501 POLYGON ((255812.5 161901.3...
-#> 2  https://id.erfgoed.net/actoren/501 POLYGON ((237040.8 180314, ...
-#> 3  https://id.erfgoed.net/actoren/501 POLYGON ((234431.8 167880.8...
-#> 4  https://id.erfgoed.net/actoren/501 POLYGON ((174471.3 218918.2...
-#> 5  https://id.erfgoed.net/actoren/501 POLYGON ((221731.4 203634.2...
-#> 6  https://id.erfgoed.net/actoren/501 POLYGON ((102573.5 176208.9...
-#> 7  https://id.erfgoed.net/actoren/501 POLYGON ((168417.3 207760.2...
-#> 8  https://id.erfgoed.net/actoren/501 POLYGON ((161569.9 225087.5...
-#> 9  https://id.erfgoed.net/actoren/501 POLYGON ((164694.6 222126.4...
-#> 10 https://id.erfgoed.net/actoren/501 POLYGON ((52226.6 176534, 5...
+#> 1  https://id.erfgoed.net/actoren/501 POLYGON ((45596.3 163800.1,...
+#> 2  https://id.erfgoed.net/actoren/501 POLYGON ((255812.5 161901.3...
+#> 3  https://id.erfgoed.net/actoren/501 POLYGON ((128324.3 186656.6...
+#> 4  https://id.erfgoed.net/actoren/501 POLYGON ((237040.8 180314, ...
+#> 5  https://id.erfgoed.net/actoren/501 POLYGON ((234431.8 167880.8...
+#> 6  https://id.erfgoed.net/actoren/501 POLYGON ((174471.3 218918.2...
+#> 7  https://id.erfgoed.net/actoren/501 POLYGON ((221731.4 203634.2...
+#> 8  https://id.erfgoed.net/actoren/501 POLYGON ((102573.5 176208.9...
+#> 9  https://id.erfgoed.net/actoren/501 POLYGON ((168417.3 207760.2...
+#> 10 https://id.erfgoed.net/actoren/501 POLYGON ((161569.9 225087.5...
 ```

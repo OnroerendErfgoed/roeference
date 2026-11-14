@@ -20,13 +20,21 @@ get_vrbg_sf(collection = "Refgem", version = "VRBG", crs = "EPSG:31370")
   unit) that should be returned. Possible values for the default version
   of the reference data set are:
 
-  - Refgemmunicipalities, default
+  Refgem
 
-  - 'Refgew'Flemish region
+  :   municipalities, default
 
-  - Refprvprovinces
+  Refgew
 
-  - 'Refarr'arrondissements
+  :   Flemish region
+
+  Refprv
+
+  :   provinces
+
+  Refarr
+
+  :   arrondissements
 
   The collection names are case-sensitive.
 

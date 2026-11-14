@@ -36,8 +36,8 @@ get_oe_archeologierapporten()
 #> 6  281 Opgraving Zoutleeuw Zoutleeuw-Ossenwegstraat ("rotonde")
 #> 7  291                Opgraving Damme Monnikerede-Stadswaterput
 #> 8  239                                Opgraving Wevelgem GUMO18
-#> 9  530         Opgraving Veurne Veurne Sint-Niklaastoren fase 2
-#> 10 252          Opgraving Herentals Herentals Zavelstraat 54-58
+#> 9  252          Opgraving Herentals Herentals Zavelstraat 54-58
+#> 10 172          Opgraving Kluisbergen Kluisbergen Berchemstraat
 #>                                                               TYPE_URI
 #> 1  https://id.erfgoed.net/vocab/ontology#ArcheologieArcheologierapport
 #> 2  https://id.erfgoed.net/vocab/ontology#ArcheologieArcheologierapport
@@ -58,8 +58,8 @@ get_oe_archeologierapporten()
 #> 6  archeologierapport                 vergunningsplichtige ingrepen 2018-11-08
 #> 7  archeologierapport     opgraving wetenschappelijke vraagstelling 2018-11-19
 #> 8  archeologierapport                 vergunningsplichtige ingrepen 2018-09-19
-#> 9  archeologierapport     opgraving wetenschappelijke vraagstelling 2019-08-09
-#> 10 archeologierapport                 vergunningsplichtige ingrepen 2018-10-09
+#> 9  archeologierapport                 vergunningsplichtige ingrepen 2018-10-09
+#> 10 archeologierapport                 vergunningsplichtige ingrepen 2018-06-05
 #>                                                            URI
 #> 1   https://id.erfgoed.net/archeologie/archeologierapporten/97
 #> 2  https://id.erfgoed.net/archeologie/archeologierapporten/210
@@ -69,8 +69,8 @@ get_oe_archeologierapporten()
 #> 6  https://id.erfgoed.net/archeologie/archeologierapporten/281
 #> 7  https://id.erfgoed.net/archeologie/archeologierapporten/291
 #> 8  https://id.erfgoed.net/archeologie/archeologierapporten/239
-#> 9  https://id.erfgoed.net/archeologie/archeologierapporten/530
-#> 10 https://id.erfgoed.net/archeologie/archeologierapporten/252
+#> 9  https://id.erfgoed.net/archeologie/archeologierapporten/252
+#> 10 https://id.erfgoed.net/archeologie/archeologierapporten/172
 #>                          geometry
 #> 1  MULTIPOLYGON (((239400.1 20...
 #> 2  MULTIPOLYGON (((99003.5 187...
@@ -80,6 +80,6 @@ get_oe_archeologierapporten()
 #> 6  MULTIPOLYGON (((202149.7 16...
 #> 7  MULTIPOLYGON (((75967.53 21...
 #> 8  MULTIPOLYGON (((66318.84 17...
-#> 9  MULTIPOLYGON (((30461.67 19...
-#> 10 MULTIPOLYGON (((183543.2 20...
+#> 9  MULTIPOLYGON (((183543.2 20...
+#> 10 MULTIPOLYGON (((90500.67 16...
 ```

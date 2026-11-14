@@ -17,15 +17,15 @@ filter_concept(data, var, concept)
 
   a dataframe containing a variable with concept uri's.
 
+- var:
+
+  the dataframe variable containing the nested data frames
+
 - concept:
 
   a string representing the uri or label of the concept that should be
   used to filter the dataset. The filter function will return all rows
   with an exact match for this label or URI in the nested dataset.
-
-- uri:
-
-  the dataframe variable containing the nested data frames
 
 ## Value
 

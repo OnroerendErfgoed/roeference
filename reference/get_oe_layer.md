@@ -43,7 +43,7 @@ receive the latest download version.
 
 ``` r
 get_oe_layer("archeologie.zip", "eindverslagen")
-#> Simple feature collection with 1665 features and 7 fields
+#> Simple feature collection with 1666 features and 7 fields
 #> Geometry type: MULTIPOLYGON
 #> Dimension:     XY
 #> Bounding box:  xmin: 23586.69 ymin: 155940 xmax: 251918.9 ymax: 238878.2

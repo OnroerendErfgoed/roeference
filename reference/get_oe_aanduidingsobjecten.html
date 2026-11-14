@@ -127,15 +127,206 @@ comment containing the retrieval_time and retrieval_url.</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_oe_aanduidingsobjecten</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req_cache(req_retry(req_url_path_append(req_url_path_append(request("https://geo.onroerenderfgoed.be"),     "downloads"), zip_name), max_tries = 5), tempdir()), path = zip_path):</span> Failed to perform HTTP request.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Caused by error in `curl::curl_fetch_disk()`:</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">!</span> Timeout was reached [geo.onroerenderfgoed.be]:</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> Resolving timed out after 10000 milliseconds</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 102906 features and 12 fields</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: MULTIPOLYGON</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 22072.08 ymin: 153082.1 xmax: 258871.8 ymax: 243901.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Projected CRS: BD72 / Belgian Lambert 72</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> First 10 features:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    AANDUID_ID                                             NAAM ALT_NAAM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1      125200                                      Gebied 4415     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2        8289                Café ontworpen door Alexis Sterck     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      140491                                    Duitse bunker     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4        1750 Kasteel de Neufcour van Eizeringen met wagenhuis     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5        4692                                    Wevershuisjes     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6       13090                     Brouwerswoning met interieur     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7      113417                                   Gemeenteschool     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8       10724                 Parochiekerk Sint-Andreas: toren     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9      145849                               Stadskern Zottegem     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10       5225                                  Bunker type 57a     &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                               TYPE_URI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  https://id.erfgoed.net/thesauri/aanduidingstypes/21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   https://id.erfgoed.net/thesauri/aanduidingstypes/1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   https://id.erfgoed.net/thesauri/aanduidingstypes/9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   https://id.erfgoed.net/thesauri/aanduidingstypes/1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   https://id.erfgoed.net/thesauri/aanduidingstypes/1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   https://id.erfgoed.net/thesauri/aanduidingstypes/1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   https://id.erfgoed.net/thesauri/aanduidingstypes/1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   https://id.erfgoed.net/thesauri/aanduidingstypes/1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   https://id.erfgoed.net/thesauri/aanduidingstypes/9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  https://id.erfgoed.net/thesauri/aanduidingstypes/1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                               TYPE_NAAM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  gebied geen archeologie, gewestelijk</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                    beschermd monument</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3        vastgesteld bouwkundig erfgoed</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                    beschermd monument</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                    beschermd monument</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                    beschermd monument</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                    beschermd monument</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8                    beschermd monument</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9        vastgesteld bouwkundig erfgoed</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                   beschermd monument</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                                                                          LOCATIE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                                                                                                                                                                                              Lanaken (Limburg)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                                                                                                                                                                     Grote Markt 37, Kerkstraat 3 (Dendermonde)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                                                                                                                                                                                                                  Brielmolenstraat 65 (Lokeren)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                                                                                                                                                                                     Luitenant Jacopsstraat 25A-39, 27 (Lennik)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                                                                                                                                                                                                       Molenstraat 89B, 91-93, 97-99 (Turnhout)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                                                                                                                                                                                                                       Budastraat 25 (Kortrijk)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                                                                                                                                                                                                        Schoolstraat 12 (Zwalm)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                                                                                                                                                                                                                     Beerlegemsebaan 53 (Zwalm)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  Arthur Scheirisstraat, Beggaardweg, Bruggenhoek, Désiré Van Den Bosschestraat, Elenestraat, Firmin Bogaertstraat, Graaf van Egmontstraat, Gustaaf Schockaertstraat, Heldenlaan, Hoogstraat, Hospitaalstraat, Kasteelpad, Kasteelstraat, Kazernstraat, Laurens</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                                                                                                                                                                                                                        Acacialaan (Antwerpen)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    GELD_START GELD_EINDE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  2019-11-25       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  2004-01-05       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  2023-06-20       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  1993-09-06       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  1992-06-10       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  1983-03-09       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  2018-10-04       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  1943-11-04       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  2023-06-20       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 2004-06-11       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                  URL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/125200</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/8289</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/140491</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/1750</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5    https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/4692</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/13090</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/113417</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10724</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/145849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/5225</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                  URI NISCODES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  https://id.erfgoed.net/aanduidingsobjecten/125200  {73042}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    https://id.erfgoed.net/aanduidingsobjecten/8289  {42006}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  https://id.erfgoed.net/aanduidingsobjecten/140491  {46029}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    https://id.erfgoed.net/aanduidingsobjecten/1750  {23104}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5    https://id.erfgoed.net/aanduidingsobjecten/4692  {13040}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   https://id.erfgoed.net/aanduidingsobjecten/13090  {34022}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  https://id.erfgoed.net/aanduidingsobjecten/113417  {45065}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   https://id.erfgoed.net/aanduidingsobjecten/10724  {45065}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  https://id.erfgoed.net/aanduidingsobjecten/145849  {41081}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10   https://id.erfgoed.net/aanduidingsobjecten/5225  {11002}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                            DATAVERANT                       geometry</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  https://id.erfgoed.net/actoren/501 MULTIPOLYGON (((243043.7 17...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  https://id.erfgoed.net/actoren/501 MULTIPOLYGON (((131038.8 19...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  https://id.erfgoed.net/actoren/501 MULTIPOLYGON (((120205.5 20...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  https://id.erfgoed.net/actoren/501 MULTIPOLYGON (((133778.9 16...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  https://id.erfgoed.net/actoren/501 MULTIPOLYGON (((189703.2 22...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  https://id.erfgoed.net/actoren/501 MULTIPOLYGON (((72080.14 16...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  https://id.erfgoed.net/actoren/501 MULTIPOLYGON (((101980.9 17...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  https://id.erfgoed.net/actoren/501 MULTIPOLYGON (((104112.7 17...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  https://id.erfgoed.net/actoren/501 MULTIPOLYGON (((110502.9 17...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 https://id.erfgoed.net/actoren/501 MULTIPOLYGON (((152213 2080...</span>
 <span class="r-in"><span><span class="fu">get_oe_aanduidingsobjecten</span><span class="op">(</span><span class="st">'vast_la'</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req_cache(req_retry(req_url_path_append(req_url_path_append(request("https://geo.onroerenderfgoed.be"),     "downloads"), zip_name), max_tries = 5), tempdir()), path = zip_path):</span> Failed to perform HTTP request.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Caused by error in `curl::curl_fetch_disk()`:</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">!</span> Timeout was reached [geo.onroerenderfgoed.be]:</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> Resolving timed out after 10000 milliseconds</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 86 features and 12 fields</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: POLYGON</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 22072.08 ymin: 153217 xmax: 258871.8 ymax: 234277.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Projected CRS: BD72 / Belgian Lambert 72</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> First 10 features:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    AANDUID_ID</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1       10453</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2       10312</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      127717</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4       10329</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       10314</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6       10274</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7       10324</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8       10381</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9       10290</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10      10279</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                     NAAM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1         Ieperse vestingen en omgeving, bossen ten zuiden en heuvelrug Wijtschate-Mesen</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                          Vallei van de Gulp bij Teuven</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                    Bellebroek en Dendermeersen tussen Oudegem en Wieze</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                        Steilrand van het Kempisch Plateau van de Kikbeek tot de Asbeek</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                    Omgeving van het Iers Kruis op de Keiberg te Lafelt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                                       's Herenbos, Heihuizen en Zalfen</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  Valleien van Dommel en Bollisserbeek tussen Peer, Hechtel-Eksel, Overpelt en Neerpelt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8                          Vallei van de Munkbosbeek met het kasteeldomein van Beerlegem</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                    Dal van de Kleine Nete tussen Nijlen en Grobbendonk</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                                                      Groot Schietveld</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    ALT_NAAM                                            TYPE_URI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1      &lt;NA&gt; https://id.erfgoed.net/thesauri/aanduidingstypes/10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2      &lt;NA&gt; https://id.erfgoed.net/thesauri/aanduidingstypes/10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      &lt;NA&gt; https://id.erfgoed.net/thesauri/aanduidingstypes/10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4      &lt;NA&gt; https://id.erfgoed.net/thesauri/aanduidingstypes/10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5      &lt;NA&gt; https://id.erfgoed.net/thesauri/aanduidingstypes/10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6      &lt;NA&gt; https://id.erfgoed.net/thesauri/aanduidingstypes/10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7      &lt;NA&gt; https://id.erfgoed.net/thesauri/aanduidingstypes/10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8      &lt;NA&gt; https://id.erfgoed.net/thesauri/aanduidingstypes/10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9      &lt;NA&gt; https://id.erfgoed.net/thesauri/aanduidingstypes/10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10     &lt;NA&gt; https://id.erfgoed.net/thesauri/aanduidingstypes/10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                   TYPE_NAAM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  vastgesteld gebied in de landschapsatlas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  vastgesteld gebied in de landschapsatlas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  vastgesteld gebied in de landschapsatlas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  vastgesteld gebied in de landschapsatlas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  vastgesteld gebied in de landschapsatlas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  vastgesteld gebied in de landschapsatlas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  vastgesteld gebied in de landschapsatlas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  vastgesteld gebied in de landschapsatlas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  vastgesteld gebied in de landschapsatlas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 vastgesteld gebied in de landschapsatlas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                               LOCATIE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                  Kemmel, Wijtschate, Wulvergem (Heuvelland), Hollebeke, Ieper, Voormezele, Zillebeke (Ieper), Mesen (Mesen), Zandvoorde (Zonnebeke)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                                                                                                         Remersdaal, Teuven (Voeren)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                                            Gijzegem, Herdersem (Aalst), Mespelare, Oudegem, Sint-Gillis-bij-Dendermonde (Dendermonde), Denderbelle, Wieze (Lebbeke)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                                                                                                  Lanaken, Rekem (Lanaken), Opgrimbie (Maasmechelen)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                                                                                                                                                 Vlijtingen (Riemst)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                                                                                                                                Oostmalle (Malle), Zoersel (Zoersel)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                                                                                       Eksel (Hechtel-Eksel), Peer (Peer), Neerpelt, Overpelt (Pelt)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  Dikkelvenne (Gavere), Balegem, Scheldewindeke (Oosterzele), Velzeke-Ruddershove (Zottegem), Beerlegem, Dikkele, Meilegem, Nederzwalm-Hermelgem, Paulatem, Sint-Maria-Latem (Zwalm)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                                                                                              Grobbendonk (Grobbendonk), Nijlen (Nijlen), Pulle, Viersel (Zandhoven)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                                                                                        Brasschaat (Brasschaat), Brecht (Brecht), Loenhout, Wuustwezel (Wuustwezel)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    GELD_START GELD_EINDE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  2013-07-04       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  2008-12-24       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  2021-07-19       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  2014-02-12       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  2008-12-24       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  2010-01-27       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  2013-12-05       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  2008-07-25       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  2015-01-27       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 2011-02-09       &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                  URL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10453</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10312</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/127717</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10329</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10314</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10274</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10324</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10381</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10290</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  https://inventaris.onroerenderfgoed.be/aanduidingsobjecten/10279</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                  URI                  NISCODES</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   https://id.erfgoed.net/aanduidingsobjecten/10453 {33011,33016,33037,33039}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   https://id.erfgoed.net/aanduidingsobjecten/10312                   {73109}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  https://id.erfgoed.net/aanduidingsobjecten/127717       {41002,42006,42011}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   https://id.erfgoed.net/aanduidingsobjecten/10329       {71067,73042,73107}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   https://id.erfgoed.net/aanduidingsobjecten/10314       {73042,73066,73110}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   https://id.erfgoed.net/aanduidingsobjecten/10274       {11055,11057,13004}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   https://id.erfgoed.net/aanduidingsobjecten/10324       {72030,72038,72043}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   https://id.erfgoed.net/aanduidingsobjecten/10381 {41081,44020,44052,45065}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   https://id.erfgoed.net/aanduidingsobjecten/10290 {11035,11054,12026,13010}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  https://id.erfgoed.net/aanduidingsobjecten/10279       {11008,11009,11053}</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                            DATAVERANT                       geometry</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  https://id.erfgoed.net/actoren/501 POLYGON ((45596.3 163800.1,...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  https://id.erfgoed.net/actoren/501 POLYGON ((255812.5 161901.3...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  https://id.erfgoed.net/actoren/501 POLYGON ((128324.3 186656.6...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  https://id.erfgoed.net/actoren/501 POLYGON ((237040.8 180314, ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  https://id.erfgoed.net/actoren/501 POLYGON ((234431.8 167880.8...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  https://id.erfgoed.net/actoren/501 POLYGON ((174471.3 218918.2...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  https://id.erfgoed.net/actoren/501 POLYGON ((221731.4 203634.2...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  https://id.erfgoed.net/actoren/501 POLYGON ((102573.5 176208.9...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  https://id.erfgoed.net/actoren/501 POLYGON ((168417.3 207760.2...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 https://id.erfgoed.net/actoren/501 POLYGON ((161569.9 225087.5...</span>
 <span class="r-in"><span><span class="fu">get_oe_aanduidingsobjecten</span><span class="op">(</span>layer <span class="op">=</span> <span class="st">'vast_la'</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 86 features and 12 fields</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: POLYGON</span>
